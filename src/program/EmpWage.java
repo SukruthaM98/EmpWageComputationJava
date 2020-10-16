@@ -7,13 +7,21 @@ import utility.Utility;
 
 public class EmpWage {
     public static void main(String[] args) {
+        //welcome message
         System.out.println("Welcome to Employee Wage Computation Program");
         Utility util=new Utility();
+        //checking if employee is present or absent
         double attendance = util.EmpAttendance();
         if (attendance == 1)
             System.out.println("Employee is Present");
-        else
+        else {
             System.out.println("Employee is Absent");
-
+        }
+        //calculating daily wage
+        int salary = util.DailyWage();
+        if (salary != 0)
+            System.out.println("salary for 8 hrs work daily is " + salary);
+        else
+            System.out.println("employee is absent ,hence salary is " +salary);
     }
 }
