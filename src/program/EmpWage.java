@@ -17,7 +17,7 @@ public class EmpWage {
         else {
             System.out.println("Employee is Absent");
         }
-        //calculating daily wage
+        //calculating daily wage for 8 hours
         int salary = util.DailyWage();
         if (salary != 0)
             System.out.println("salary for 8 hrs work daily is " + salary);
