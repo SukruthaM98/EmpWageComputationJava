@@ -17,11 +17,17 @@ public class EmpWage {
         else {
             System.out.println("Employee is Absent");
         }
-        //calculating daily wage for 8 hours
+        //calculating daily wage for 8 hours full-time
         int salary = util.DailyWage();
         if (salary != 0)
             System.out.println("salary for 8 hrs work daily is " + salary);
         else
             System.out.println("employee is absent ,hence salary is " +salary);
+        //calculating daily wage for 4 hours part-time
+        int salaryPartTime = util.DailyWagePartTime();
+        if (salaryPartTime != 0)
+            System.out.println("salary for 4 hrs part-time work is " + salaryPartTime);
+        else
+            System.out.println("employee is absent ,hence salary is " +salaryPartTime);
     }
 }
