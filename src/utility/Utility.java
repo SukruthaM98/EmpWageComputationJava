@@ -123,11 +123,16 @@ public class Utility {
 
     /**
      * Functionality         : This function is used to calculate
-     *                         salary of employee till working
-     *                         hours reached 100 or working days
-     *                         reached 20 using objects and
+     *                         salary of employee using objects and
      *                         encapsulation
-     *
+     * @param WorkingDays    - Input taken from object for number of
+     *                         working days in particular company
+     * @param MaxHrsInMonth  - Input taken from object for maximum
+     *                         number of working hours in particular
+     *                         company
+     * @param EmpRatePerHour - Input taken from object for Employee
+     *                         wage per hour according to particular
+     *                         company
      * @return TotalSalary   - Returns the value after computing the
      *                         salary
      */
