@@ -1,4 +1,6 @@
 package program;
+import utility.EmpWageObjectDmart;
+import utility.EmpWageObjectReliance;
 import utility.Utility;
 
 /**@author Sukrutha Manjunath
@@ -14,8 +16,25 @@ public class EmpWage {
         //computing salary of employee for either 100 hours or 20 days using
         //   class methods and class variables
         Utility util=new Utility();
-        int salary=util.Condition();
-        System.out.println("Total Salary of the employee is " +salary);
+        EmpWageObjectReliance empWageObjectReliance = new EmpWageObjectReliance();
+        empWageObjectReliance.setCompany("Reliance");
+        empWageObjectReliance.setWorkingDays(20);
+        empWageObjectReliance.setMaxHrsInMonth(100);
+        empWageObjectReliance.setEmpRatePerHour(20);
+        EmpWageObjectDmart empWageObjectDmart = new EmpWageObjectDmart();
+        empWageObjectDmart.setCompany("Dmart");
+        empWageObjectDmart.setWorkingDays(30);
+        empWageObjectDmart.setMaxHrsInMonth(200);
+        empWageObjectDmart.setEmpRatePerHour(40);
+        int salaryReliance=util.Condition( empWageObjectReliance.getWorkingDays(),
+                empWageObjectReliance.getMaxHrsInMonth(),
+                empWageObjectReliance.getEmpRatePerHour() );
+        System.out.println("Total Salary of the employee of company " + empWageObjectReliance.getCompany() +
+                " is " +salaryReliance);
+        int salaryDmart=util.Condition( empWageObjectDmart.getWorkingDays(), empWageObjectDmart.getMaxHrsInMonth(),
+                                    empWageObjectDmart.getEmpRatePerHour() );
+        System.out.println("Total Salary of the employee of company " + empWageObjectDmart.getCompany() +
+                            " is " +salaryDmart);
 
     }
 }

@@ -132,11 +132,8 @@ public class Utility {
      */
     public static final int PartTime=1;
     public static final int FullTime=2;
-    public static final int MaxHrsInMonth=100;
-    public static final int WorkingDays=20;
-    public static final int EmpRatePerHour=20;
 
-    public static int Condition() {
+    public static int Condition(int WorkingDays, int MaxHrsInMonth, int EmpRatePerHour) {
         int TotalEmpHr =0 , TotalWorkingDays = 0;
         int EmpHrs;
         while (TotalEmpHr < MaxHrsInMonth && TotalWorkingDays < WorkingDays) {
