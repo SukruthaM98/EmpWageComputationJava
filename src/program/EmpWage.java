@@ -14,7 +14,7 @@ public class EmpWage {
         //welcome message
         System.out.println("Welcome to Employee Wage Computation Program");
         //computing salary of employee for either 100 hours or 20 days using
-        //   class methods and class variables
+        //   objects and encapsulation
         Utility util=new Utility();
         EmpWageObjectReliance empWageObjectReliance = new EmpWageObjectReliance();
         empWageObjectReliance.setCompany("Reliance");

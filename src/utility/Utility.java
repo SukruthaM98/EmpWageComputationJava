@@ -125,8 +125,9 @@ public class Utility {
      * Functionality         : This function is used to calculate
      *                         salary of employee till working
      *                         hours reached 100 or working days
-     *                         reached 20 using class variables
-     *                         and class method
+     *                         reached 20 using objects and
+     *                         encapsulation
+     *
      * @return TotalSalary   - Returns the value after computing the
      *                         salary
      */
