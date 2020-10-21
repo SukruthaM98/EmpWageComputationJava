@@ -11,6 +11,22 @@ public class EmpWageObject {
     private  int EmpRatePerHour;
     private String company;
 
+    public EmpWageObject(int workingDays, int maxHrsInMonth, int empRatePerHour, String company) {
+        WorkingDays = workingDays;
+        MaxHrsInMonth = maxHrsInMonth;
+        EmpRatePerHour = empRatePerHour;
+        this.company = company;
+    }
+
+    public String toString() {
+        return "EmpWageObject{" +
+                "WorkingDays=" + WorkingDays +
+                ", MaxHrsInMonth=" + MaxHrsInMonth +
+                ", EmpRatePerHour=" + EmpRatePerHour +
+                ", company='" + company + '\'' +
+                '}';
+    }
+
     //constructor
     public EmpWageObject() {}
 

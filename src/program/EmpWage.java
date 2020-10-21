@@ -3,6 +3,7 @@ import utility.EmpWageObject;
 import utility.EmpWageObjectDmart;
 import utility.EmpWageObjectReliance;
 import utility.Utility;
+import java.util.ArrayList;
 
 /**@author Sukrutha Manjunath
  * Create Date   : 17th-october-2020
@@ -14,28 +15,20 @@ public class EmpWage {
     public static void main(String[] args) {
         //welcome message
         System.out.println("Welcome to Employee Wage Computation Program");
-        //computing salary of employee for company Dmart and Reliance using single object
-        //    instead of multiple objects for every company
-        Utility util=new Utility();
-        EmpWageObject empWageObject=new EmpWageObject();
-        empWageObject.setCompany("dmart");
-        empWageObject.setWorkingDays(30);
-        empWageObject.setMaxHrsInMonth(200);
-        empWageObject.setEmpRatePerHour(40);
-        int salaryDmart=util.Condition( empWageObject.getWorkingDays(),
-                empWageObject.getMaxHrsInMonth(),
-                empWageObject.getEmpRatePerHour() );
-        System.out.println("Total Salary of the employee of company " + empWageObject.getCompany() +
-                " is " +salaryDmart);
-        empWageObject.setCompany("Reliance");
-        empWageObject.setWorkingDays(20);
-        empWageObject.setMaxHrsInMonth(100);
-        empWageObject.setEmpRatePerHour(20);
-        int salaryReliance=util.Condition( empWageObject.getWorkingDays(),
-                empWageObject.getMaxHrsInMonth(),
-                empWageObject.getEmpRatePerHour() );
-        System.out.println("Total Salary of the employee of company " + empWageObject.getCompany() +
-                " is " +salaryReliance);
+        //computing salary of employee for company Dmart and Reliance using ArrayList
 
+        Utility util=new Utility();
+        EmpWageObject empWageObject1=new EmpWageObject(20,100,20,
+                                                        "Dmart");
+        EmpWageObject empWageObject2=new EmpWageObject(10,50,12,
+                                                        "Reliance");
+
+        ArrayList<EmpWageObject> list = new ArrayList<EmpWageObject>();
+        list.add(empWageObject1);
+        list.add(empWageObject2);
+
+        for (EmpWageObject emp : list)
+
+            System.out.println(emp);
     }
 }
