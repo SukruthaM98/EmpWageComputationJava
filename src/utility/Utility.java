@@ -123,23 +123,16 @@ public class Utility {
 
     /**
      * Functionality         : This function is used to calculate
-     *                         salary of employee using objects and
-     *                         encapsulation
-     * @param WorkingDays    - Input taken from object for number of
-     *                         working days in particular company
-     * @param MaxHrsInMonth  - Input taken from object for maximum
-     *                         number of working hours in particular
-     *                         company
-     * @param EmpRatePerHour - Input taken from object for Employee
-     *                         wage per hour according to particular
-     *                         company
+     *                         salary of employee using class variables
+     *                         and function
+     *
      * @return TotalSalary   - Returns the value after computing the
      *                         salary
      */
     public static final int PartTime=1;
     public static final int FullTime=2;
+    public static int Condition(int MaxHrsInMonth,int WorkingDays,int EmpRatePerHour) {
 
-    public static int Condition(int WorkingDays, int MaxHrsInMonth, int EmpRatePerHour) {
         int TotalEmpHr =0 , TotalWorkingDays = 0;
         int EmpHrs;
         while (TotalEmpHr < MaxHrsInMonth && TotalWorkingDays < WorkingDays) {
