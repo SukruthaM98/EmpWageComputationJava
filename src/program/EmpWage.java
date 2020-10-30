@@ -1,7 +1,5 @@
 package program;
 import utility.EmpWageObject;
-import utility.EmpWageObjectDmart;
-import utility.EmpWageObjectReliance;
 import utility.Utility;
 import java.util.ArrayList;
 
@@ -15,20 +13,17 @@ public class EmpWage {
     public static void main(String[] args) {
         //welcome message
         System.out.println("Welcome to Employee Wage Computation Program");
-        //computing salary of employee for company Dmart and Reliance using ArrayList
+        //storing daily wage along with total wage
 
-        Utility util=new Utility();
-        EmpWageObject empWageObject1=new EmpWageObject(20,100,20,
-                                                        "Dmart");
-        EmpWageObject empWageObject2=new EmpWageObject(10,50,12,
-                                                        "Reliance");
+        Utility empWageBuilder = new Utility() {
+            @Override
+            public int getTotalWage() {
+                return 0;
+            }
+        };
+        empWageBuilder.addCompanyEmpWage("Dmart", 20, 2, 10);
+        empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
+        empWageBuilder.computeEmpWage();
 
-        ArrayList<EmpWageObject> list = new ArrayList<EmpWageObject>();
-        list.add(empWageObject1);
-        list.add(empWageObject2);
-
-        for (EmpWageObject emp : list)
-
-            System.out.println(emp);
     }
 }
